@@ -1,5 +1,11 @@
 # Tinder Clone web app
+
  coding with glen
+
+# Preview
+![tinder-clone-frontend](https://github.com/glenchiridza/tinder-clone-frontend/blob/master/git_assets/s1.png)
+![tinder-clone-frontend](https://github.com/glenchiridza/tinder-clone-frontend/blob/master/git_assets/s2.png)
+
  This is just the frontend , in order to make use of the backend service with mongo db ,nodejs, express...
  make sure to download or clone the repository for backend
  and use it along side this web app.

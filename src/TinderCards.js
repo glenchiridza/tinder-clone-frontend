@@ -11,7 +11,7 @@ function TinderCards() {
     const offline_people = [
         {
             "_id":1,
-            "name":"Glen Chiridza",
+            "name":"Faith Chiridza",
             "imageUrl":"images/person.jpg"
         },
         {
@@ -21,7 +21,7 @@ function TinderCards() {
         },
         {
             "_id":3,
-            "name":"Faith Chiridza",
+            "name":"Glen Chiridza",
             "imageUrl":"images/person.jpg"
         },
         {
