@@ -1,0 +1,37 @@
+.swipeButtons{
+    position: fixed;
+    bottom:0vh;
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+
+}
+
+.swipeButtons .MuiIconButton-root {
+    background:#fff;
+    box-shadow: 0 10px 24px 0 rgba(0,0,0,0.3) !important;
+}
+
+.btn-replay{
+    color:#f5b748;
+}
+
+.btn-close{
+
+    color:#ec536f;
+}
+
+.btn-rate{
+
+    color:#62b4f9;
+}
+
+.btn-fav{
+
+    color:#76e2b3;
+}
+
+.btn-flashon{
+
+    color:#915dd1;
+}
