@@ -1,30 +1,56 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TinderCard from 'react-tinder-card';
 import './TinderCards.css'
+import axios from './axios';
 
 function TinderCards() {
     const [people, setPeople] = useState([
-        {
-            id:1,
-            name: "Glen Chiridza",
-            url: "images/person.jpg"
-        },
-        {
-            id:2,
-            name: "Wendy Chiridza",
-            url: "images/person.jpg"
-        },
-        {
-            id:3,
-            name: "Clive Chiridza",
-            url: "images/person.jpg"
-        },
-        {
-            id:4,
-            name: "Faith Chiridza",
-            url: "images/person.jpg"
-        }
+        
     ]);
+
+    const offline_people = [
+        {
+            "_id":1,
+            "name":"Glen Chiridza",
+            "imageUrl":"images/person.jpg"
+        },
+        {
+            "_id":2,
+            "name":"Wendy Chiridza",
+            "imageUrl":"images/wendy.jpg"
+        },
+        {
+            "_id":3,
+            "name":"Faith Chiridza",
+            "imageUrl":"images/person.jpg"
+        },
+        {
+            "_id":4,
+            "name":"Clive Chiridza",
+            "imageUrl":"images/clive.jpg"
+        }
+    ]
+
+
+    //when tinder cards load, run this piece of chord onces and don't run it again
+    useEffect(() => {
+
+        async function fetchData() {
+            const req = await axios.get('/tinder/cards');
+            
+            setPeople(req.data);
+        
+        }
+        fetchData();
+    }, [])   //when item in [] brackets changes it will trigger
+
+    //if no network or user offline use the offline images
+    if(people.length == 0){
+        setPeople(offline_people)
+       }
+    console.log(people);
+
+
 
     const swiped = (direction, nameToRemove) => {
         
@@ -40,13 +66,13 @@ function TinderCards() {
                 {people.map((person) => (
                     <TinderCard
                     className='swipe'
-                    key={person.name}
+                    key={person._id}
                     preventSwipe={['up','down']}
                     onSwipe={(dir) => swiped(dir, person.name)}
                     onCardLeftScreen={() => outOfFrame(person.name)}
                     >
                         <div 
-                            style={{backgroundImage:`url(${person.url})`}}
+                            style={{backgroundImage:`url(${person.imageUrl})`}}
                             className='card'>
 
                                 <h3>{person.name}</h3>

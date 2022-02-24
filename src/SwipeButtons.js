@@ -10,20 +10,20 @@ function SwipeButtons() {
 
   return (
     <div className='swipeButtons'>
-        <IconButton>
-            <Replay onClick={swiped} fontSize="large" className="btn-replay"/>
+        <IconButton onClick={swiped}>
+            <Replay fontSize="large" className="btn-replay"/>
         </IconButton>
-        <IconButton>
-            <Close onClick={swiped} fontSize="large" className="btn-close"/>
+        <IconButton onClick={swiped}>
+            <Close fontSize="large" className="btn-close"/>
         </IconButton>
-        <IconButton>
-            <StarRate onClick={swiped} fontSize="large" className="btn-rate"/>
+        <IconButton onClick={swiped}>
+            <StarRate  fontSize="large" className="btn-rate"/>
         </IconButton>
-        <IconButton>
-            <Favorite onClick={swiped} fontSize="large" className="btn-fav"/>
+        <IconButton onClick={swiped}>
+            <Favorite  fontSize="large" className="btn-fav"/>
         </IconButton>
-        <IconButton>
-            <FlashOn onClick={swiped} fontSize="large" className="btn-flashon"/>
+        <IconButton onClick={swiped}>
+            <FlashOn fontSize="large" className="btn-flashon"/>
         </IconButton>
     </div>
   )
