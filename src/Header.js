@@ -8,14 +8,14 @@ function Header() {
     <div className='header'>
         
         <IconButton>
-            <Person font-size="large" className="header_icon" />
+            <Person fontSize="large" className="header_icon" />
         </IconButton>
 
         <img className='header_logo'
             src='images/tinder_logo.png' alt='header logo'/>
         
         <IconButton>
-            <Forum font-size="large" className='header_icon' />
+            <Forum fontSize="large" className='header_icon' />
         </IconButton>
 
     </div>
